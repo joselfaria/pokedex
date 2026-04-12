@@ -1,5 +1,5 @@
 export default function PokemonCard({ pokemon }: { pokemon: { id: number; name: string; types: string[] } }) {
-  const spriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`;
+  const spriteUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png?raw=true`;
 
   return (
     <div className="border rounded-2xl p-4 flex flex-col bg-gradient-to-b from-green-400 to-gray-300 items-center text-black gap-2">

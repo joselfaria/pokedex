@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npx tsx scripts/getPokemons.tsx && next dev",
+    "build": "npx tsx scripts/getPokemons.tsx && next build",
     "start": "next start",
     "lint": "eslint"
   },
