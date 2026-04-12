@@ -1,5 +1,4 @@
 import PokemonCard from "@/components/PokemonCard";
-
 import pokemons from "@/data/pokemons.json";
 
 

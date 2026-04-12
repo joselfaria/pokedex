@@ -1,3 +1,5 @@
+import { Pokemon, typeColors } from "@/types/pokemon";
+
 export default function PokemonCard({ pokemon }: { pokemon: { id: number; name: string; types: string[] } }) {
   const spriteUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png?raw=true`;
 
@@ -7,7 +9,7 @@ export default function PokemonCard({ pokemon }: { pokemon: { id: number; name: 
       <p className="capitalize text-lg font-semibold">{pokemon.name}</p>
       <div className="flex gap-1">
         {pokemon.types.map((type) => (
-          <span key={type} className={`bg-zinc-400 text-white text-sm px-4 py-1 rounded-full capitalize`}>
+          <span key={type} className={` ${typeColors[type]} text-white text-sm px-4 py-1 rounded-full capitalize`}>
             {type}
           </span>
         ))}
