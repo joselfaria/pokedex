@@ -9,7 +9,7 @@ export default function Pokedex({ pokemons }: { pokemons: Pokemon[] }) {
   const [search, setSearch] = useState("");
 
   const filtered = pokemons.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase())
+    p.name.toLowerCase().includes(search.toLowerCase()) || p.id.toString().includes(search)
   );
 
   return (
