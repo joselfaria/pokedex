@@ -1,7 +1,27 @@
+export interface PokemonStats {
+  base_stat: number;
+  stat: { name: string };
+}
+
+export interface PokemonHabilidades {
+  ability: { name: string };
+}
+
 export interface Pokemon {
   id: number;
   name: string;
-  types: string[];
+  weight: number;
+  height: number;
+  types: { type: { name: string } }[];
+  stats: PokemonStats[];
+  abilities: PokemonHabilidades[];
+  sprites: {
+    other: {
+      "official-artwork": {
+        front_default: string;
+      };
+    };
+  };
 }
 
 export const typeColors: Record<  string, { bg: string; gradient: string }> = {
