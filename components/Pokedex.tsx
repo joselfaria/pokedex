@@ -13,22 +13,32 @@ export default function Pokedex({ pokemons }: { pokemons: Pokemon[] }) {
   );
 
   return (
-    <>
-      <div className="bg-red-500 flex items-center justify-between p-8 mb-8">
-        <div className="flex items-center gap-4 ml-10">
-          <img src="/pokemon-icon.webp" alt="pokemon icon" className="w-16 h-16" />
-          <span className="text-6xl font-bold text-white">Pokédex</span>
+    <div className="flex flex-col w-full px-8 xl:px-20" style={{ backgroundColor: "#1564a8" }}>  
+
+      <div className="flex items-center justify-center gap-4 w-full pt-10">
+        <img 
+          src="/pokedex-logo.webp" 
+          alt="pokedex logo" 
+          className="w-1/4 min-w-[300px] max-w-[400px]" 
+        />
+      </div>
+
+      <div className="flex flex-row justify-between py-10">
+        <div className="">
+        <SearchBar onSearch={setSearch} />
         </div>
-        <div className="mr-20">
-          <SearchBar onSearch={setSearch} />
+        <div className="">
+        <SearchBar onSearch={setSearch} />
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-8 xl:px-20 bg-white">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {filtered.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
       </div>
-    </>
+
+    </div>
+   
   );
 }

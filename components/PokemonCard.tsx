@@ -70,7 +70,7 @@ export default function PokemonCard({ pokemon }: { pokemon: { id: number; name: 
 
         {/* Bottom section — white */}
         <div 
-          className="flex flex-col justify-center w-full px-4 py-4 gap-2 bg-white"
+          className="flex flex-col justify-center flex-1 w-full px-4 py-4 gap-2 bg-white"
         >
 
           {/* Name */}
