@@ -16,14 +16,15 @@ O objetivo é construir uma Pokédex funcional ao longo dos estudos.
 
 ## 🛠️ Funcionalidades Atuais
 
-- **Listagem de Pokémons**: Exibe os pokémons da primeira geracao.
+- **Listagem de Pokémons**: Exibe os pokémons da primeira geração.
+- **Busca por nome ou id**: Permite pesquisar pokémons dinamicamente pelo nome.
+- **Página de detalhes**: Exibe informações detalhadas de cada pokémon selecionado.
 
 ## 🔜 Funcionalidades Planejadas
 
-- Busca por nome
-- Página de detalhes de cada pokémon
 - Filtro por tipo
 - Paginação
+- Modo dark
 
 ## 🏃 Como Executar
 
