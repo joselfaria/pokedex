@@ -13,9 +13,9 @@ export default function Pokedex({ pokemons }: { pokemons: Pokemon[] }) {
   );
 
   return (
-    <div className="flex flex-col w-full px-8 xl:px-20" style={{ backgroundColor: "#1564a8" }}>  
+    <div className="relative flex flex-col w-full px-8 xl:px-20 pb-100" style={{ backgroundColor: "#1564a8" }}>  
 
-      <div className="flex items-center justify-center gap-4 w-full pt-10">
+      <div className="flex items-center justify-center gap-4 w-full pt-10 z-10">
         <img 
           src="/pokedex-logo.webp" 
           alt="pokedex logo" 
@@ -23,19 +23,27 @@ export default function Pokedex({ pokemons }: { pokemons: Pokemon[] }) {
         />
       </div>
 
-      <div className="flex flex-row justify-between py-10">
+      <div className="flex flex-row justify-between py-10 z-10">
         <div className="">
         <SearchBar onSearch={setSearch} />
         </div>
         <div className="">
-        <SearchBar onSearch={setSearch} />
+        =========================Buscar por tipo ===========================
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 z-10">
         {filtered.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
         ))}
+      </div>
+
+      <div className="absolute inset-x-0 bottom-0 top-16 z-0 flex items-end overflow-visible pointer-events-none pt-200">
+        <img
+          src="day-background.webp"
+          alt="day background"
+          className="w-full h-auto transform translate-y-60"
+        />
       </div>
 
     </div>

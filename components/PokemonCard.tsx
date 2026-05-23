@@ -15,7 +15,6 @@ export default function PokemonCard({ pokemon }: { pokemon: { id: number; name: 
         fontFamily: "Poppins, sans-serif",
         height: "313px",
         borderRadius: "24px",
-        border: "2px solid #727272",
         boxShadow: "6px 6px 4px 0 rgba(0, 0, 0, 0.34)",
         backdropFilter: "blur(2px)",
       }}
@@ -26,8 +25,7 @@ export default function PokemonCard({ pokemon }: { pokemon: { id: number; name: 
           className={`relative flex items-center justify-center w-full  ${typeColors[primaryType].bg} `}
           style={{ 
             height: "195px",
-            borderBottom: "2px solid #727272",
-            backgroundImage: "linear-gradient(135deg, rgba(0, 0, 0, 0.11), rgba(255, 255, 255, 0.20))"
+            backgroundImage: "linear-gradient(135deg, rgba(255, 255, 255, 0.20), rgba(0, 0, 0, 0.20))"
           }}  
         >
           
